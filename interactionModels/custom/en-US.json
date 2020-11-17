@@ -1,0 +1,345 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "coeus quiz",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "GameRulesIntent",
+          "slots": [],
+          "samples": [
+            "reminder of the rules",
+            "learn the rules",
+            "learn game rules",
+            "rules",
+            "explain the rules"
+          ]
+        },
+        {
+          "name": "QuestionOneIntent",
+          "slots": [
+            {
+              "name": "confirmBegin",
+              "type": "YesNo",
+              "samples": [
+                "{confirmBegin}"
+              ]
+            }
+          ],
+          "samples": [
+            "skip to question one",
+            "start game",
+            "start the quiz",
+            "start playing",
+            "start"
+          ]
+        },
+        {
+          "name": "ResultsOneIntent",
+          "slots": [
+            {
+              "name": "GuessOne",
+              "type": "Guess",
+              "samples": [
+                "{GuessOne}"
+              ]
+            }
+          ],
+          "samples": [
+            "results one"
+          ]
+        },
+        {
+          "name": "QuestionTwoIntent",
+          "slots": [
+            {
+              "name": "confirmContinue",
+              "type": "YesNo",
+              "samples": [
+                "{confirmContinue}"
+              ]
+            }
+          ],
+          "samples": [
+            "skip to question two"
+          ]
+        },
+        {
+          "name": "ResultsTwoIntent",
+          "slots": [
+            {
+              "name": "GuessTwo",
+              "type": "Guess",
+              "samples": [
+                "{GuessTwo}"
+              ]
+            }
+          ],
+          "samples": [
+            "results two"
+          ]
+        },
+        {
+          "name": "QuestionThreeIntent",
+          "slots": [
+            {
+              "name": "confirmContinue",
+              "type": "YesNo",
+              "samples": [
+                "{confirmContinue}"
+              ]
+            }
+          ],
+          "samples": [
+            "skip to question three"
+          ]
+        },
+        {
+          "name": "ResultsThreeIntent",
+          "slots": [
+            {
+              "name": "GuessThree",
+              "type": "Guess",
+              "samples": [
+                "{GuessThree}"
+              ]
+            }
+          ],
+          "samples": [
+            "results three"
+          ]
+        },
+        {
+          "name": "ResetPlayedIntent",
+          "slots": [],
+          "samples": [
+            "reset played before",
+            "reset played",
+            "reset"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "No",
+              "name": {
+                "value": "No"
+              }
+            },
+            {
+              "id": "Yes",
+              "name": {
+                "value": "Yes"
+              }
+            }
+          ],
+          "name": "YesNo"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "three"
+              }
+            },
+            {
+              "name": {
+                "value": "two"
+              }
+            },
+            {
+              "name": {
+                "value": "one"
+              }
+            }
+          ],
+          "name": "Guess"
+        }
+      ],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "QuestionOneIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "confirmBegin",
+              "type": "YesNo",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.281652751909.669970866779"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ResultsOneIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "GuessOne",
+              "type": "Guess",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1470068359904.920961917730"
+              }
+            }
+          ]
+        },
+        {
+          "name": "QuestionTwoIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "confirmContinue",
+              "type": "YesNo",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1515621579805.1392375026388"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ResultsTwoIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "GuessTwo",
+              "type": "Guess",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.717333692958.1574171157523"
+              }
+            }
+          ]
+        },
+        {
+          "name": "QuestionThreeIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "confirmContinue",
+              "type": "YesNo",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.729308047690.1262231856232"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ResultsThreeIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "GuessThree",
+              "type": "Guess",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.868958826909.1312583580227"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.281652751909.669970866779",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Are you ready for the first question?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1470068359904.920961917730",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What do you think the answer is, One, Two, or Three?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1515621579805.1392375026388",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Are you ready for the second question?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.717333692958.1574171157523",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What do you think the answer is, One, Two, or Three?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.729308047690.1262231856232",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Are you ready for the third and final question?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.868958826909.1312583580227",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What do you think the answer is, One, Two, or Three?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "2"
+}
